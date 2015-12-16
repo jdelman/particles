@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kla-zB-Tbb" customClass="ParticleView">
+                                <rect key="frame" x="70" y="70" width="460" height="460"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DrK-JU-51u">
+                                <rect key="frame" x="283" y="28" width="34" height="30"/>
+                                <state key="normal" title="Start"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="kla-zB-Tbb" secondAttribute="trailing" constant="50" id="5Ug-2U-vDr"/>
+                            <constraint firstItem="kla-zB-Tbb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LMa-5q-aoK"/>
+                            <constraint firstItem="kla-zB-Tbb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="Wdp-ru-OXX"/>
+                            <constraint firstItem="kla-zB-Tbb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="YnR-1h-BlJ"/>
+                            <constraint firstItem="kla-zB-Tbb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="dOc-mw-Co9"/>
+                            <constraint firstItem="DrK-JU-51u" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ixN-E2-1vt"/>
+                            <constraint firstItem="DrK-JU-51u" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="s00-9j-JL4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="DrK-JU-51u" id="GlK-fy-xcx"/>
+                        <outlet property="pView" destination="kla-zB-Tbb" id="QJ6-2A-4CL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
