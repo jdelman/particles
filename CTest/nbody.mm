@@ -38,6 +38,8 @@ NBody::NBody () {
             vel[i][j] = (0.1 * drand48());
         }
     }
+    
+    get_acc_jerk_pot_coll();
 }
 
 NBody::NBody (int _n, double _dt_param, double _mass[], double _pos[][NDIM], double _vel[][NDIM]) {
@@ -53,6 +55,8 @@ NBody::NBody (int _n, double _dt_param, double _mass[], double _pos[][NDIM], dou
     acc = new double[n][NDIM];          // accelerations and jerks
     jerk = new double[n][NDIM];         // for all particles
     nsteps = 0;               // number of integration time steps completed
+    
+    get_acc_jerk_pot_coll();
 }
 
 void NBody::get_acc_jerk_pot_coll()
@@ -178,7 +182,6 @@ void NBody::predict_step(double dt)
 void NBody::evolve()
 {
 
-    get_acc_jerk_pot_coll();
     NSLog(@"coll_time: %@", [NSNumber numberWithDouble:coll_time]);
     double dt = dt_param * coll_time;
     evolve_step(dt);
